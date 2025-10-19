@@ -27,3 +27,12 @@ function trueOrFalse($value) {
         <li><?php echo $movie; ?></li>
     <?php endforeach; ?>
 </ul>
+<form action="process.php" method="POST">
+        <label for="favorite_movie">Select your favorite movie:</label>
+        <select name="favorite_movie" id="favorite_movie">
+            <?php foreach ($movies as $movie): ?>
+                <option value="<?php echo $movie; ?>"><?php echo $movie; ?></option>
+            <?php endforeach; ?>
+        </select>
+        <input type="submit" value="Submit">
+</form>
